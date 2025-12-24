@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Memo: Super Useful Web</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@charset "utf-8";
+
+/****************************************
+Standard Theme
+****************************************/
+
+/* All */
+html,body,header,main,article,nav,aside,section,footer,
+ol,ul,li,h1,h2,h3,h4,h5,h6,div,p,a,span,img {
+margin:0;
+padding:0;
+}
+
+html {
+overflow-y:scroll;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+color:#666666;
+}
+
+body {
+color:#666666;
+font:normal 100%/160% sans-serif;
+background-color:#ffffff;
+word-break:break-all;
+text-size-adjust:none;
+}
+
+header {
+background-color:#ffffff;
+}
+
+footer {
+padding-top:0;
+padding-bottom:0;
+}
+
+ol,ul,li {
+list-style-type:none;
+}
+
+header,
+main,
+footer {
+width:100%;
+margin:0 auto;
+}
+
+main {
+padding-bottom:20px;
+}
+
+main h1 {
+border:2px solid #dddddd;
+background-color:#ffffff;
+border-radius:6px;
+}
+
+main h2 {
+border-top:2px solid #dddddd;
+border-bottom:2px solid #dddddd;
+}
+
+h1,
+h2 {
+margin:20px 0 10px 0;
+padding:4px 16px;
+color:#666666;
+}
+
+main p {
+padding-bottom:20px;
+}
+
+main img {
+max-width:100%;
+}
+
+.linklc,
+.linkwd {
+display:flex;
+flex-wrap:wrap;
+}
+
+.linklc div,
+.linkwd a {
+margin:4px 4px;
+padding:4px 10px;
+border-radius:8px;
+border:2px solid #dddddd;
+}
+
+.lcsp {
+padding-top:16px;
+}
+
+.mnsp {
+padding-top:40px;
+}
+
+.inwd,
+.inps {
+display:inline-block;
+}
+
+.ck {
+color:#666666;
+background-color:#ffffff;
+border-radius:8px;
+border:2px solid #dddddd;
+padding:2px 16px;
+margin:8px 8px 8px 0;
+display:inline-block;
+}
+
+input[type="file"],
+input[type="button"] {
+display:none;
+}
+
+::placeholder {
+color:#cccccc;
+}
+
+.holder {
+position:relative;
+overflow:hidden;
+}
+
+.placeholder {
+pointer-events:none;
+user-select:none;
+position:absolute;
+font:normal 90%/160% sans-serif;
+color:#cccccc;
+padding:6px 2px;
+}
+
+.hidden {
+display:none;
+}
+
+.open,
+.save,
+.load,
+.none {
+font:normal 100%/160% sans-serif;
+color:#666666;
+border:2px solid #dddddd;
+}
+
+.title,
+.txt {
+font:normal 90%/160% sans-serif;
+color:#666666;
+border:2px solid #dddddd;
+width:100%;
+box-sizing:border-box;
+outline:none;
+padding:0;
+margin:4px 0 0 0;
+border-radius:6px;
+}
+
+.txt {
+height:280px;
+resize:none;
+overflow-y:scroll;
+overflow-anchor:none;
+}
+
+.open,
+.save,
+.load,
+.none {
+padding:2px 12px;
+margin:8px 8px 8px 0;
+border-radius:8px;
+display:inline-block;
+text-decoration:underline;
+cursor:pointer;
+width:48px;
+text-align:center;
+}
+
+/* Small */
+@media screen and (max-width:480px){
+
+body {
+background-color:#ffffff;
+}
+
+h1,
+h2 {
+font:bold 100%/160% sans-serif;
+}
+
+header,
+main,
+footer {
+box-sizing:border-box;
+padding-right:10px;
+padding-left:10px;
+}
+
+.linklc div,
+.linkwd a {
+width:8em;
+text-align:center;
+}
+
+}
+
+/* Medium */
+@media screen and (min-width:480px) and (max-width:860px){
+
+body {
+background-color:#ffffff;
+}
+
+h1,
+h2 {
+font:bold 100%/160% sans-serif;
+}
+
+header,
+main,
+footer {
+box-sizing:border-box;
+padding-right:40px;
+padding-left:40px;
+}
+
+.linklc div,
+.linkwd a {
+width:8em;
+text-align:center;
+}
+
+}
+
+/* Large */
+@media screen and (min-width:860px){
+
+body {
+text-align:center;
+}
+
+h1 {
+font:bold 120%/160% sans-serif;
+}
+
+h2 {
+font:bold 115%/160% sans-serif;
+}
+
+main {
+display:inline-block;
+vertical-align:top;
+text-align:left;
+width:704px;
+min-height:540px;
+padding-right:20px;
+padding-left:20px;
+margin-top:20px;
+margin-bottom:20px;
+border:2px solid #dddddd;
+border-radius:10px;
+background-color:#ffffff;
+}
+
+.linklc div,
+.linkwd a {
+width:8em;
+text-align:center;
+}
+
+}
+/* End */
+</style>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAAxQTFRF////9PT05ubm3t7etdxP3QAAAJBJREFUeNqtk0sSwCAIQyHv/nfupgoZK6tmI0zCV41fkQBw5WEUCMiIMTxmPmYe71Q3Xmz4eC06z5aXrR4nyDLXKc/rCfI9Wbqth+aLmgKsAuw2BE2wM6s7xlgncRfY4k5GyAZ0gacAuS7tQihDvjE2jk2GKaxQbWp6QqCBL895Jp+viDVtCr5qJh3jz1L8jAf7/wMAKAuPLgAAAABJRU5ErkJggg==" sizes="32x32">
+<link rel="icon" type="image/png" href="data:image/png;base64,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" sizes="192x192">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAAAXNSR0IArs4c6QAAAAxQTFRF////9vb26enp3t7eZfVEXQAABNpJREFUeNrtnVuOpDAQBB3h+995tU9GYmZsKg0LEvlNi1B2YrsKA+3Vq1evXr26t/in9lM8AVi1/5IKwO2B+07qfbmxfynljsTYv9UNqbWP5IOCsYkbIj/JauiT8jk2b/JGyA+DRvsBcf+R2W7AfDmyAEBjm9eVG4dZ4NMV331tlva0lZE8j5l2W8GXyXhtXigIkG/lsw9kfpFXi8clo+EDbTa2+XrZd+LmzPA8m9syZp7IDIAAAlzLHLRTN6kC1zBL3k7dpHDBYMfyol1ZzJz4DNpn5MIRlP0AfV5jRE4KtIHJVzV0KPuMvSJdz0zQY7goJFhk1l6XstJoppEzCcuYDZCvygiWmEc4XVXUsdk5M7HNAtDYVk/o0mSzY07GDAWOrUskrlUIbFYozENyAXMSTzSk3iNYZpbZciWn9uCPMZ6UwYyag+FwzU04TKgPhmNVX5KkTOLQ0g4HyJHZcIrRg4ZZTF0xWpKGWR4RKRjN1Q0zKFjNkXAY2Bz81QOOuPmUey2B0UFTJPOaY0bL4NjU5pxib57LmAFEADg68g2hZyka7JgnF586Bqc8VRjUNoPlskLB6vQKmGTWQSGYW03ZaCqVrjCHMp0OiWsb7QPJHMu00Wnhi1GPgwo0YW2DYa90EsZZaByelz4rqvnYo0i05CbugsEc9I5kymgJG9RMnIU4HbtwhE11CvnI0uEkswKoJ0Inc6zfTduAzqV6BrqUDiv1DOjB+TSB3htdu/kIjn30YIRmoZ1hLiYWC7kvDjIumzs8liDq0Mwxs4OODymkY1CxRU7n0DsfB6eqQzOG7ptMoHGGmWB2Ca/D74+wZStKCtBhFjUskhhAR9fhXqCSVqO4CrrNHEcbyWAoj6GL4gbQebOuhJRDrze6rYPuH7TO6NxpZ6FZYbTMjDBZb8QAelBjZrP47Bk90+hmAD04MGCO14EYQq/fLtCPQTMLTbxph7kDCaDzUGOl19uTUSGHtvdCO9QAep81MmYH6cihc6uhl4zuxNDMWp0ws4t0CG2yZWfprRSL98Q95/kCg5l+HbWHmNvckViFpraFzaCGHM0uYx+kEI0Bs8ehO+H6YXx7XFbc78ZgAyHxJrix0fmcwRwEYP9MHLAkWL6NqG0McjHNTO2ClcJoIMBmsVrb9M/A6KD643OevwoeVODI0RaGsYJsLTA6yEdADa1gdJCPnFrO3L3tKdQQlGNBPgJqyereMYKr3y4mQVMkWMQGZlP652gtsDp7/lCo1b3Hf8Sah1MFWs68vvwDtEAchCOyesNGtfAIfsrcMGnF0AAEaDTyRyArVtsuE836tnf+EzUj5qBquIzZ5Ofchjmf/dczh2f1amoHzEGz/mKfQ6s7F79r1HMfz88FPWAOHhYKhMuYCahDm7ssc8BTqA2YF79jJykeXJ02OSHNOXNOnZVonOKF3P+9nebU+etRc+ocG1PmSkNXibM840XudY7NZnJgc5RACWIRMGfUXVj1qjG58D3ZM9ywEYc259gbN3xJC6ppMzWn3kvljxqtwYZr0LLORWMAoN1/6hp02dcJ6IEC5EjgWmTaFQJv4HIS7dzkJ2FLo10vTYgDpXZ7f+L8onQ9cXWlaQ58vRiBK7Sbid/gv9H9yKoiPOO7iALtKR9H3Ch5v2z56tWrV68eqR9fnGEU3CZ5qgAAAABJRU5ErkJggg==" sizes="180x180">
+<script>
+// Execute function before page display
+window.addEventListener('DOMContentLoaded',function(){
+
+let ta = document.querySelector('textarea');
+let ph = document.querySelector('.placeholder');
+ta.addEventListener('input', () => {
+ph.classList.toggle('hidden', ta.value !== '');
+});
+
+open();
+input();
+
+});
+
+// Run in page view
+window.addEventListener('pageshow',function(){
+
+if(txt.value === ""){
+;
+}
+else{
+let ta = document.querySelector('textarea');
+let ph = document.querySelector('.placeholder');
+ph.classList.toggle('hidden', ta.value !== '');
+}
+
+input();
+
+});
+
+// open function
+function open() {
+
+// File loading
+let obj = document.getElementById('selfile');
+
+obj.addEventListener("change",function(evt){
+
+// Select file in dialog
+const oti = document.getElementById("title").value;
+const otx = document.getElementById("txt").value;
+if(oti !== ""){
+document.getElementById("ck").innerHTML = "Error! 101 Processing interrupted.";
+}
+else if(otx !== ""){
+document.getElementById("ck").innerHTML = "Error! 102 Processing interrupted.";
+}
+else{
+let file = evt.target.files;
+
+// Creating a FileReader
+let reader = new FileReader();
+
+// Load in text format
+reader.readAsText(file[0],'UTF-8');
+
+let element = obj.files[0];
+let opnm = element.name;
+let omtype = opnm.split('.').pop();
+let omar = ['txt', 'htm', 'html', 'css', 'js', 'xml'];
+
+// Display in text area
+if(opnm.indexOf(".") === -1){
+document.getElementById("ck").innerHTML = "Error! 201 Processing interrupted.";
+}
+else if(opnm.indexOf(".") === 0){
+document.getElementById("ck").innerHTML = "Error! 202 Processing interrupted.";
+}
+else if(opnm.indexOf(".",opnm.indexOf(".") + 1) !== -1){
+document.getElementById("ck").innerHTML = "Error! 203 Processing interrupted.";
+}
+else if(!omar.includes(omtype)){
+document.getElementById("ck").innerHTML = "Error! 204 Processing interrupted.";
+}
+else{
+
+// Processing after loading
+reader.onload = function(ev){
+
+title.value = element.name;
+mime.value = element.type;
+txt.value = reader.result;
+ipot.value = element.name;
+ipom.value = element.type;
+orit.value = reader.result;
+document.getElementById('homed').innerHTML = title.value;
+document.getElementById("ck").innerHTML = "Opened the file.";
+ckva.value = "0";
+
+if(txt.value === ""){
+;
+}
+else{
+let ta = document.querySelector('textarea');
+let ph = document.querySelector('.placeholder');
+ph.classList.toggle('hidden', ta.value !== '');
+}
+
+}
+
+}
+
+}
+
+});
+
+// Load reset
+obj.addEventListener("click",function(evt){
+
+evt.target.value = '';
+
+});
+
+}
+
+// save function
+function save() {
+
+// Text area string
+const sti = document.getElementById("title").value;
+const txt = document.getElementById("txt").value;
+let smtype = sti.split('.').pop();
+let smar = ['txt', 'htm', 'html', 'css', 'js', 'xml'];
+if(sti === ""){
+document.getElementById("ck").innerHTML = "Error! 301 Processing interrupted.";
+}
+else if(sti.indexOf(".") === -1){
+document.getElementById("ck").innerHTML = "Error! 302 Processing interrupted.";
+}
+else if(sti.indexOf(".") === 0){
+document.getElementById("ck").innerHTML = "Error! 303 Processing interrupted.";
+}
+else if(sti.indexOf(".",sti.indexOf(".") + 1) !== -1){
+document.getElementById("ck").innerHTML = "Error! 304 Processing interrupted.";
+}
+else if(!smar.includes(smtype)){
+document.getElementById("ck").innerHTML = "Error! 305 Processing interrupted.";
+}
+else if(!txt){
+document.getElementById("ck").innerHTML = "Error! 306 Processing interrupted.";
+}
+else{
+let mvalb;
+let file = sti;
+let filetype = file.split('.').pop();
+if(filetype === 'txt'){
+mvalb = 'text/plain';
+}
+else if(filetype === 'htm'){
+mvalb = 'text/html';
+}
+else if(filetype === 'html'){
+mvalb = 'text/html';
+}
+else if(filetype === 'css'){
+mvalb = 'text/css';
+}
+else if(filetype === 'js'){
+mvalb = 'text/javascript';
+}
+else if(filetype === 'xml'){
+mvalb = 'application/xml';
+}
+else{
+mvalb = 'application/octet-stream';
+}
+
+// Convert string to Blob
+const blob = new Blob([txt],{type:mvalb});
+
+// Tag for download
+const a = document.createElement('a');
+a.href = URL.createObjectURL(blob);
+a.download = sti;
+a.click();
+URL.revokeObjectURL(a.href);
+document.getElementById("ck").innerHTML = "File saved.";
+ckva.value = "1";
+
+}
+
+}
+
+// load function
+function load() {
+
+if(title.value === ipot.value){
+;
+}
+else{
+title.value = ipot.value;
+document.getElementById('homed').innerHTML = title.value;
+}
+
+if(mime.value === ipom.value){
+;
+}
+else{
+mime.value = ipom.value;
+}
+
+if(txt.value === orit.value){
+;
+}
+else{
+txt.value = orit.value;
+}
+
+if(title.value === ""){
+document.getElementById('homed').innerHTML = "Web Memo";
+}
+document.getElementById("ck").innerHTML = "File restored.";
+ckva.value = "2";
+
+if(txt.value === ""){
+let ta = document.querySelector('textarea');
+let ph = document.querySelector('.placeholder');
+ph.classList.toggle('hidden', ta.value !== '').disabled = true;
+}
+else{
+;
+}
+
+}
+
+// none function
+function none() {
+
+let tiva = title.value;
+let miva = mime.value;
+let txva = txt.value;
+let itva = ipot.value;
+let imva = ipom.value;
+let orva = orit.value;
+
+if(tiva === ""){
+;
+}
+else{
+title.value = "";
+}
+
+if(miva === ""){
+;
+}
+else{
+mime.value = "";
+}
+
+if(txva === ""){
+;
+}
+else{
+txt.value = "";
+}
+
+if(itva === ""){
+;
+}
+else{
+ipot.value = "";
+}
+
+if(imva === ""){
+;
+}
+else{
+ipom.value = "";
+}
+
+if(orva === ""){
+;
+}
+else{
+orit.value = "";
+}
+
+document.getElementById('homed').innerHTML = "Web Memo";
+document.getElementById("ck").innerHTML = "Emptied the file.";
+ckva.value = "3";
+
+if(txt.value === ""){
+let ta = document.querySelector('textarea');
+let ph = document.querySelector('.placeholder');
+ph.classList.toggle('hidden', ta.value !== '').disabled = true;
+}
+else{
+;
+}
+
+}
+
+function ckst() {
+ckva.value = "";
+}
+
+// Operation
+function input() {
+
+if(title.value === ""){
+document.getElementById('homed').innerHTML = "Web Memo";
+}
+else{
+document.getElementById('homed').innerHTML = title.value;
+}
+
+if (ckva.value === "0"){
+document.getElementById("ck").innerHTML = "Opened the file.";
+}
+else if (ckva.value === "1"){
+document.getElementById("ck").innerHTML = "File saved.";
+}
+else if (ckva.value === "2"){
+document.getElementById("ck").innerHTML = "File restored.";
+}
+else if (ckva.value === "3"){
+document.getElementById("ck").innerHTML = "Emptied the file.";
+}
+else if (ckva.value === "4"){
+document.getElementById("ck").innerHTML = "Text cut complete.";
+}
+else if (ckva.value === "5"){
+document.getElementById("ck").innerHTML = "Text copied complete.";
+}
+else if (ckva.value === "6"){
+document.getElementById("ck").innerHTML = "Text pasted complete.";
+}
+else{
+
+let init = document.getElementById("title").value;
+let inim = document.getElementById("mime").value;
+let intv = document.getElementById("txt").value;
+let inot = document.getElementById("ipot").value;
+let inom = document.getElementById("ipom").value;
+let inov = document.getElementById("orit").value;
+let txtinp = document.getElementById("ck").textContent;
+
+if (init === inot && inim === inom && intv === inov){
+
+if(txtinp === "The text has not been edited."){
+;
+}
+else{
+document.getElementById("ck").innerHTML = "The text has not been edited.";
+}
+
+}
+else{
+
+if(txtinp === "Editing text."){
+;
+}
+else{
+document.getElementById("ck").innerHTML = "Editing text.";
+}
+
+}
+
+}
+
+title.addEventListener('input',function(){
+
+if(title.value === ""){
+document.getElementById('homed').innerHTML = "Web Memo";
+}
+else{
+document.getElementById('homed').innerHTML = title.value;
+}
+
+});
+
+title.addEventListener('cut',function(){
+
+let txtct = document.getElementById("ck").textContent;
+if(txtct === "Text cut complete."){
+;
+}
+else{
+document.getElementById("ck").innerHTML = "Text cut complete.";
+ckva.value = "4";
+}
+
+});
+
+title.addEventListener('copy',function(){
+
+let txtcp = document.getElementById("ck").textContent;
+if(txtcp === "Text copied complete."){
+;
+}
+else{
+document.getElementById("ck").innerHTML = "Text copied complete.";
+ckva.value = "5";
+}
+
+});
+
+title.addEventListener('paste',function(){
+
+let txtps = document.getElementById("ck").textContent;
+if(txtps === "Text pasted complete."){
+;
+}
+else{
+document.getElementById("ck").innerHTML = "Text pasted complete.";
+ckva.value = "6";
+}
+
+});
+
+mime.addEventListener('cut',function(){
+
+let txtct = document.getElementById("ck").textContent;
+if(txtct === "Text cut complete."){
+;
+}
+else{
+document.getElementById("ck").innerHTML = "Text cut complete.";
+ckva.value = "4";
+}
+
+});
+
+mime.addEventListener('copy',function(){
+
+let txtcp = document.getElementById("ck").textContent;
+if(txtcp === "Text copied complete."){
+;
+}
+else{
+document.getElementById("ck").innerHTML = "Text copied complete.";
+ckva.value = "5";
+}
+
+});
+
+mime.addEventListener('paste',function(){
+
+let txtps = document.getElementById("ck").textContent;
+if(txtps === "Text pasted complete."){
+;
+}
+else{
+document.getElementById("ck").innerHTML = "Text pasted complete.";
+ckva.value = "6";
+}
+
+});
+
+txt.addEventListener('cut',function(){
+
+let txtct = document.getElementById("ck").textContent;
+if(txtct === "Text cut complete."){
+;
+}
+else{
+document.getElementById("ck").innerHTML = "Text cut complete.";
+ckva.value = "4";
+}
+
+});
+
+txt.addEventListener('copy',function(){
+
+let txtcp = document.getElementById("ck").textContent;
+if(txtcp === "Text copied complete."){
+;
+}
+else{
+document.getElementById("ck").innerHTML = "Text copied complete.";
+ckva.value = "5";
+}
+
+});
+
+txt.addEventListener('paste',function(){
+
+let txtps = document.getElementById("ck").textContent;
+if(txtps === "Text pasted complete."){
+;
+}
+else{
+document.getElementById("ck").innerHTML = "Text pasted complete.";
+ckva.value = "6";
+}
+
+});
+
+}
+</script>
+</head>
+
+<body>
+
+<header id="top">
+
+</header>
+
+<main>
+
+<article>
+
+<h1 id="homed">Web Memo</h1>
+
+<div>
+<input class="title" id="title" name="title" type="text" onkeyup="ckst(), input();" placeholder="Title">
+<input class="title" id="mime" name="mime" type="text" onkeyup="ckst(), input();" placeholder="Mime">
+<div class="holder">
+<div class="placeholder">
+<br>
+//* Text Area *//<br><br>
+abcdefghijklmnopqrstuvwxyz<br>
+ABCDEFGHIJKLMNOPQRSTUVWXYZ<br><br>
+0123456789@#$_&-+()/:;!?<br>
+:⁠-⁠):⁠^⁠)^⁠_⁠^(⁠^⁠^⁠):⁠,⁠-⁠)8⁠-⁠)B⁠-⁠)o⁠:⁠-⁠):⁠-⁠D}⁠:⁠‑⁠);⁠);⁠-⁠):⁠-⁠*:⁠-⁠P:⁠-⁠!:⁠-⁠$<br>
+</div>
+<textarea class="txt" id="txt" name="txt" onkeyup="ckst(), input();"></textarea>
+</div>
+<input style="display:none" id="ipot" name="ipot" type="text">
+<input style="display:none" id="ipom" name="ipom" type="text">
+<textarea style="display:none" id="orit" name="orit"></textarea>
+</div>
+<div class="inwd">
+<div class="inps">
+<label class="open"><input type="file" id="selfile">Open</label>
+<label class="save"><input value="Save" type="button" onclick="save();">Save</label>
+</div>
+<div class="inps">
+<label class="load"><input value="Load" type="button" onclick="load();">Load</label>
+<label class="none"><input value="None" type="button" onclick="none();">None</label>
+</div>
+</div>
+<div>
+<div class="ck" id="ck">Loading...</div>
+<input style="display:none" id="ckva" name="ckva" type="text">
+</div>
+
+</article>
+
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
